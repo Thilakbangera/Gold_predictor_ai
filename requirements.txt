@@ -5,7 +5,6 @@ scipy
 statsmodels
 requests
 textblob
-pmdarima
 
 # Machine learning / prediction
 scikit-learn
