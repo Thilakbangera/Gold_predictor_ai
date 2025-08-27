@@ -1,5 +1,4 @@
 # Core
-streamlit
 numpy
 pandas
 scipy
@@ -11,16 +10,16 @@ pmdarima
 # Machine learning / prediction
 scikit-learn
 
-# For SARIMAX / plots
+# For SARIMAX / statsmodels
 matplotlib
 
-# Backend / deployment
+# Optional for deployment
 uvicorn
 fastapi
 python-multipart
 
-# Environment variables
+# Misc / utilities
 python-dotenv
 
-# NLP
+# NLP / sentiment
 nltk
