@@ -57,6 +57,10 @@ def sentiment():
 # ---------------- Tavily Q&A ----------------
 class QuestionInput(BaseModel):
     question: str
+    
+@app.get("/")
+def home():
+    return {"message": "API is running correctly!"}
 
 @app.post("/ask")
 def ask_question(q: QuestionInput):
