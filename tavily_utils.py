@@ -1,5 +1,4 @@
 import requests
-import streamlit as st
 from textblob import TextBlob
 import os
 
