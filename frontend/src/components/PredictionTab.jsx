@@ -28,7 +28,7 @@ export default function PredictionTab() {
     }
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/predict", {
+      const res = await fetch("https://gold-predsgd.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ exog: exog.map(Number) }),
@@ -47,7 +47,7 @@ export default function PredictionTab() {
     const fetchNews = async () => {
       setNewsLoading(true);
       try {
-        const res = await fetch("http://127.0.0.1:8000/news");
+        const res = await fetch("https://gold-predsgd.onrender.com/news");
         const data = await res.json();
         setNews(data.articles || []);
       } catch (err) {
@@ -59,7 +59,7 @@ export default function PredictionTab() {
 
     const fetchSentiment = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/sentiment");
+        const res = await fetch("https://gold-predsgd.onrender.com/sentiment");
         const data = await res.json();
         setSentiment(data.score);
       } catch (err) {
@@ -80,7 +80,7 @@ export default function PredictionTab() {
     setChatLoading(true);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/ask", {
+      const res = await fetch("https://gold-predsgd.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: input }),
